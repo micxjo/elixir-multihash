@@ -19,6 +19,8 @@ defmodule Multihash.Mixfile do
     [{:hexate, ">= 0.5.0", only: :test},
      {:dogma, "~> 0.0", only: :dev},
      {:earmark, "~> 0.1", only: :dev},
-     {:ex_doc, "~> 0.11", only: :dev}]
+     {:ex_doc, "~> 0.11", only: :dev},
+     {:excheck, "~> 0.3", only: :test},
+     {:triq, github: "krestenkrab/triq", only: :test}]
   end
 end
