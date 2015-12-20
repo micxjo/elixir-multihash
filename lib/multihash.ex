@@ -60,7 +60,7 @@ defmodule Multihash do
   end
   defp hash(:sha512, _, _), do: {:error, "Invalid digest length"}
 
-  defp hash(_, _, _), do: {:error, "Invalid hash algorithm"}
+  @type mh_binary :: <<_ :: 16>>
 
   @doc ~S"""
   Encodes a Multihash as a binary.
@@ -71,7 +71,7 @@ defmodule Multihash do
       {:ok, <<17, 20, 247, 255, 158, 139, 123, 178, 224, 155, 112, 147,
               90, 93, 120, 94, 12, 197, 217, 208, 171, 240>>}
   """
-  @spec encode(t) :: {:ok, binary} | {:error, any}
+  @spec encode(t) :: {:ok, mh_binary} | {:error, any}
   def encode(%Multihash{algorithm: algorithm, size: size, digest: digest}) do
     code = Map.get(codes, algorithm)
     cond do
