@@ -1,4 +1,5 @@
 # Elixir Multihash
+[![Build Status](https://travis-ci.org/micxjo/elixir-multihash.svg)](https://travis-ci.org/micxjo/elixir-multihash)
 
 A [multihash](https://github.com/jbenet/multihash) implementation in Elixir.
 
